@@ -131,3 +131,35 @@ h3 {
   padding: 1.5rem;
   width: 100%;
 }
+
+#Game #hud {
+  display: flex;
+  justify-content: center;
+}
+
+#Game .hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#Game .hud-main-text {
+  text-align: center;
+}
+
+#END form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#END input {
+  margin-bottom: 2rem;
+  width: 20rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+#END .Socoretext {
+  font-size: 1.8rem;
+}

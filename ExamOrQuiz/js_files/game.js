@@ -1,5 +1,7 @@
+const questionCounterText = document.getElementById("questionCounter");
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const scoreText = document.getElementById("score");
 
 let currentQuestion = {};
 let accoptingAnswers = false;
@@ -49,9 +51,57 @@ let questions = [
     choice4: "?",
     answer: 4,
   },
+  {
+    question: "qwe",
+    choice1: "Who",
+    choice2: "Am",
+    choice3: "I",
+    choice4: "?",
+    answer: 4,
+  },
+  {
+    question: "qwerty",
+    choice1: "Who",
+    choice2: "Am",
+    choice3: "I",
+    choice4: "?",
+    answer: 4,
+  },
+  {
+    question: "qwerty123",
+    choice1: "Who",
+    choice2: "Am",
+    choice3: "I",
+    choice4: "?",
+    answer: 1,
+  },
+  {
+    question: "qwertyui",
+    choice1: "Who",
+    choice2: "Am",
+    choice3: "I",
+    choice4: "?",
+    answer: 2,
+  },
+  {
+    question: "qwerrtyu1234",
+    choice1: "Who",
+    choice2: "Am",
+    choice3: "I",
+    choice4: "?",
+    answer: 3,
+  },
+  {
+    question: "qwerqwewqeweu1234",
+    choice1: "Who",
+    choice2: "Am",
+    choice3: "I",
+    choice4: "?",
+    answer: 3,
+  },
 ];
 
-const correct_bonus = 10;
+const correct_bonus = 1;
 const max_question = 10;
 // start function
 start_game = () => {
@@ -63,12 +113,10 @@ start_game = () => {
   get_new_question(0);
 };
 
-// get new question from questionaire randomly
+// get new question from questionaire
 function get_new_question(index) {
-  if (availableQuestions.length === 0 || questionCounter >= max_question) {
-  }
   //get question
-  questionCounter++;
+  questionCounterText.innerText = que_count + "/" + max_question;
   currentQuestion = availableQuestions[index];
   question.innerText = currentQuestion.question;
   //get choices
@@ -80,7 +128,7 @@ function get_new_question(index) {
   accoptingAnswers = true;
 }
 
-let que_count = 0;
+let que_count = 1;
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!accoptingAnswers) return;
@@ -88,15 +136,30 @@ choices.forEach((choice) => {
     accoptingAnswers = false;
     const selected_choice = e.target;
     const selected_answer = selected_choice.dataset["number"];
-    console.log(selected_answer);
+    //console.log(selected_answer);
+
+    const classToApply =
+      selected_answer == currentQuestion.answer ? "correct" : "incorrect";
+    console.log(classToApply);
+
+    if (classToApply == "correct") {
+      incrementScore(correct_bonus);
+    }
+
     if (que_count < questions.length - 1) {
       que_count++;
       get_new_question(que_count);
     } else {
       console.log("Complete!");
-      return window.location.assign("/othertypeofquestions.html");
+      return window.location.assign("/../game/end.html");
     }
   });
 });
+
+incrementScore = (num) => {
+  score += num;
+  scoreText.innerText = score;
+  localStorage.setItem("mostRecentScore", score);
+};
 
 start_game();
