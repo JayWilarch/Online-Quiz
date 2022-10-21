@@ -1,7 +1,7 @@
 const questionCounterText = document.getElementById("questionCounter");
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-const scoreText = document.getElementById("score");
+//const scoreText = document.getElementById("score");
 
 let currentQuestion = {};
 let accoptingAnswers = false;
@@ -9,97 +9,20 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-//somple questions
-let questions = [
-  {
-    question: "What is this?",
-    choice1: "What",
-    choice2: "Is",
-    choice3: "This",
-    choice4: "?",
-    answer: 1,
-  },
-  {
-    question: "Who am I?",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 4,
-  },
-  {
-    question: "Who?",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 4,
-  },
-  {
-    question: "am?",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 4,
-  },
-  {
-    question: " I?",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 4,
-  },
-  {
-    question: "qwe",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 4,
-  },
-  {
-    question: "qwerty",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 4,
-  },
-  {
-    question: "qwerty123",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 1,
-  },
-  {
-    question: "qwertyui",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 2,
-  },
-  {
-    question: "qwerrtyu1234",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 3,
-  },
-  {
-    question: "qwerqwewqeweu1234",
-    choice1: "Who",
-    choice2: "Am",
-    choice3: "I",
-    choice4: "?",
-    answer: 3,
-  },
-];
+//fetch questions from the json file using fetch API
+let questions = [];
+
+fetch("/../questions.json")
+  .then((res) => {
+    return res.json();
+  })
+  // call the questions before trigerring start_game()
+  .then((loadedQuestions) => {
+    //console.log(loadedQuestions);
+    //multiple choice
+    questions = loadedQuestions.MultipleChoice;
+    start_game();
+  });
 
 const correct_bonus = 1;
 const max_question = 10;
@@ -109,7 +32,7 @@ start_game = () => {
   score = 0;
   //... is a spread operator for the question to get all the questions from
   availableQuestions = [...questions];
-  console.log(availableQuestions);
+  //console.log(availableQuestions);
   get_new_question(0);
 };
 
@@ -138,28 +61,30 @@ choices.forEach((choice) => {
     const selected_answer = selected_choice.dataset["number"];
     //console.log(selected_answer);
 
+    //checking answers for the score board
     const classToApply =
       selected_answer == currentQuestion.answer ? "correct" : "incorrect";
-    console.log(classToApply);
+    //console.log(classToApply);
 
     if (classToApply == "correct") {
       incrementScore(correct_bonus);
     }
 
+    //if there's no more question proceed to the end html
     if (que_count < questions.length - 1) {
       que_count++;
       get_new_question(que_count);
     } else {
-      console.log("Complete!");
+      //console.log("Complete!");
       return window.location.assign("/../game/end.html");
     }
   });
 });
 
+//for showing the score at the upper right
 incrementScore = (num) => {
+  ``;
   score += num;
-  scoreText.innerText = score;
+  //scoreText.innerText = score;
   localStorage.setItem("mostRecentScore", score);
 };
-
-start_game();
