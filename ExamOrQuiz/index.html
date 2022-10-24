@@ -11,9 +11,26 @@
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Quiz</h1>
-        <a class="btn" href="/../game/game.html">Let's G!</a>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="submitNameBtn"
+            onclick="saveUserName(event)"
+            disabled
+          >
+            Let's G!
+          </button>
+        </form>
         <a class="btn" href="/../game/scores.html">Scores</a>
       </div>
     </div>
+    <script src="/../js_files/index.js"></script>
   </body>
 </html>

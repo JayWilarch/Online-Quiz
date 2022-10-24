@@ -1,4 +1,4 @@
-const username = document.getElementById("username");
+const username = localStorage.getItem("recentName");
 const saveScorebtn = document.getElementById("saveScorebtn");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const finalScore = document.getElementById("finalScore");
@@ -10,9 +10,9 @@ const maxScore = 10;
 finalScore.innerText = mostRecentScore;
 
 //disable save button if there's no username
-username.addEventListener("keyup", () => {
-  saveScorebtn.disabled = !username.value;
-});
+//username.addEventListener("keyup", () => {
+//saveScorebtn.disabled = !username.value;
+//});
 
 //saving score to the array
 saveScore = (e) => {
@@ -22,7 +22,7 @@ saveScore = (e) => {
   //score to json storage
   const score = {
     score: mostRecentScore,
-    name: username.value,
+    name: username,
   };
   //arrange the she scrore
   scoreList.push(score);
