@@ -88,5 +88,117 @@
       "choice4": "Password",
       "answer": 1
     }
+  ],
+
+  "TrueOrFalse": [
+    {
+      "question": "JavaScript is a programming language.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "HTML 5 was first drafted in 2022.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "HTML 5 was first drafted in 2022.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "HTML 5 was first edited by Ian Hickson.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "HTML 5 provides drag-and-drop effect.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": " HTML mobile Ready.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "HTML 5 has a total of 12 formatting tags.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "Every HTML5 web page starts with the <doctype> declaration.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "Comments in HTML begins with “<-” and ends with “->”.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "Older HTML files work on newer browsers",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "A hyperlink apply to text only.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    }
+  ],
+
+  "Identificatio": [
+    {
+      "question": "Marquees tag works only with?",
+      "answer": "Internet explorer"
+    },
+    {
+      "question": "What level does the <H1> tag used to display heading?",
+      "answer": "First Level"
+    },
+    {
+      "question": "What tag is used to add an image to a document?",
+      "answer": "<img>"
+    },
+    {
+      "question": "<select> and </select> tags are used to create?",
+      "answer": " List boxes"
+    },
+    {
+      "question": "What list is enclosed with the <dl> and </dl> tags?",
+      "answer": "Definition List"
+    },
+    {
+      "question": "What tag is used to create row and column heading in a table?",
+      "answer": "<th>"
+    },
+    {
+      "question": "What is the color combination of Tint?",
+      "answer": "hue + white"
+    },
+    {
+      "question": "What tag does the body of a HTML document end?",
+      "answer": "</body>"
+    },
+    {
+      "question": "What Attribute of the <meta> tag identifies the URL of the web page?",
+      "answer": "url"
+    },
+    {
+      "question": "What is the end tag of a paragraph?",
+      "answer": "</p>"
+    }
   ]
 }

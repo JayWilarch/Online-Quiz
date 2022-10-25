@@ -20,7 +20,7 @@ fetch("/../questions.json")
   .then((loadedQuestions) => {
     //console.log(loadedQuestions);
     //multiple choice
-    questions = loadedQuestions.MultipleChoice;
+    questions = loadedQuestions.TrueOrFalse;
     start_game();
   });
 
@@ -64,7 +64,7 @@ choices.forEach((choice) => {
     //checking answers for the score board
     const classToApply =
       selected_answer == currentQuestion.answer ? "correct" : "incorrect";
-    //console.log(classToApply);
+    console.log(classToApply);
 
     if (classToApply == "correct") {
       incrementScore(correct_bonus);
@@ -76,7 +76,7 @@ choices.forEach((choice) => {
       get_new_question(que_count);
     } else {
       //console.log("Complete!");
-      return window.location.assign("/../game/tf.html");
+      return window.location.assign("/../game/end.html");
     }
   });
 });
@@ -86,5 +86,5 @@ incrementScore = (num) => {
   ``;
   score += num;
   //scoreText.innerText = score;
-  localStorage.setItem("mostRecentScore", score);
+  localStorage.setItem("mostRecentScoreMC", score);
 };
