@@ -80,6 +80,86 @@
                 "False"
             ],
             "answer": "False"
+        }, {
+            "number": 11,
+            "question": "Every Web page closes with ......body.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "False"
+        }, {
+            "number": 12,
+            "question": "H1 is a larger size text than H2.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
+        }, {
+            "number": 13,
+            "question": "An absolute path is what a server needs to locate the file being requested.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
+        }, {
+            "number": 14,
+            "question": "A home page is the same as your index page.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
+        }, {
+            "number": 15,
+            "question": "Hyper in HTML stands for agile, energetic, enthusiastic, active, alive, ready, quick, rapid, alert & daring.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
+        }, {
+            "number": 16,
+            "question": "A <id> tag defines the label for several input elements like text, email, number, date, etc.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "False"
+        }, {
+            "number": 17,
+            "question": "We can set a placeholder text with the <ph> attribute.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "False"
+        }, {
+            "number": 18,
+            "question": "Every HTML element has a display property, and the default value of it is either block or inline.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
+        }, {
+            "number": 19,
+            "question": "The autocomplete attribute provides automated suggestions filling out the form field values.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
+        }, {
+            "number": 20,
+            "question": "The map tag goes with an <area> tag to determine the clickable areas.",
+            "choices": [
+                "True",
+                "False"
+            ],
+            "answer": "True"
         }
     ]
 }

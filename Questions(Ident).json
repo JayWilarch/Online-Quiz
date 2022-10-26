@@ -1,0 +1,54 @@
+{
+    "identification": [
+{
+    "num":1,
+    "question": "Marquees tag works only with?",
+    "answer":"Internet Explorer"
+},
+{
+    "num":2,
+    "question": "What level does the <H1> tag used to display heading?",
+    "answer":"first level"
+},
+{
+    "num":3,
+    "question": "What tag is used to add an image to a document?",
+    "answer":"<img>"
+},
+{
+    "num":4,
+    "question": "<SELECT> and </SELECT> tags are used to create?",
+    "answer":"list boxes"
+},
+{
+    "num":5,
+    "question": "What list is enclosed with the <DL> and </DL> tags?",
+    "answer":"definition list"
+},
+{
+    "num":6,
+    "question": "What tag is used to create row and column heading in a table?",
+    "answer":"<th>"
+},
+{
+    "num":7,
+    "question": "What is the color combination of Tint?",
+    "answer":"hue + white"
+},
+{
+    "num":8,
+    "question": "What tag does the body of a HTML document end?",
+    "answer":"</body>"
+},
+{
+    "num":9,
+    "question": "What Attribute of the <meta> tag identifies the URL of the web page?",
+    "answer":"url"
+},
+{
+    "num":10,
+    "question": "What is the end tag of a paragraph?",
+    "answer":"</p>"
+}
+    ]
+}

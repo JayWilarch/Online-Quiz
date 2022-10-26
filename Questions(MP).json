@@ -110,6 +110,116 @@
         "(D) Password"
     ],
     "answer":"(A) Menu controls"
+},
+{
+    "num":11,
+    "question": "How many types of heading does an HTML contain?",
+    "choices": [
+        "(A) 5",
+        "(B) 6",
+        "(C) 7",
+        "(D) 8"
+    ],
+    "answer":"(B) 6"
+},
+{
+    "num":12,
+    "question": "Which HTML tag is used to display the data in the tabular form?",
+    "choices": [
+        "(A) <tr>",
+        "(B) <th>",
+        "(C) <td>",
+        "(D) <table>"
+    ],
+    "answer":"(D) <table>"
+},
+{
+    "num":13,
+    "question": "Hyperlinks in HTML have meanings on their colors, what does a link that is colored purple mean?",
+    "choices": [
+        "(A) Unvisited Link",
+        "(B) Inactive Link",
+        "(C) Active Link",
+        "(D) Visited Link"
+    ],
+    "answer":"(D) Visited Link"
+},
+{
+    "num":14,
+    "question": "What does <th> mean or do?",
+    "choices": [
+        "(A) It defines a table",
+        "(B) It defines a header",
+        "(C) It defines a row",
+        "(D) It defines a column"
+    ],
+    "answer":"(B) It defines a header"
+},
+{
+    "num":15,
+    "question": "What is the use of an iframe tag?",
+    "choices": [
+        "(A) An iframe is used by apple applications.",
+        "(B) An iframe is used to display a web page within a web page.",
+        "(C) An iframe is used to display apple websites.",
+        "(D) An iframe is used to display a web page for IOS users."
+    ],
+    "answer":"(B) An iframe is used to display a web page within a web page."
+},
+{
+    "num":16,
+    "question": "Every HTML document should have what?",
+    "choices": [
+        "(A) A head section, and within it a title, followed by a body.",
+        "(B) A title section, and within it a header, followed by a body.",
+        "(C) A body and header.",
+        "(D) None of these."
+    ],
+    "answer":"(A) A head section, and within it a title, followed by a body."
+},
+{
+    "num":17,
+    "question": "Which tag would insert a graphic into a Web page?",
+    "choices": [
+        "(A) Img src=Glass.jpeg",
+        "(B) P....Glass.jpeg..../p",
+        "(C) Img file=Glass.jpeg",
+        "(D) Picture=Glass.jpeg"
+    ],
+    "answer":"(A) Img src=Glass.jpeg"
+},
+{
+    "num":18,
+    "question": "What allows you to transfer your html files to a Web server?",
+    "choices": [
+        "(A) FTP which stands for File Tracking Performance",
+        "(B) FTP which stands for File Transfer Protocol",
+        "(C) BMR which stands for Binary Metric Rhythm",
+        "(D) None of these"
+    ],
+    "answer":"(B) FTP which stands for File Transfer Protocol"
+},
+{
+    "num":19,
+    "question": "What will happen if you overlap sets of tags?",
+    "choices": [
+        "(A) both tags will be nullified.",
+        "(B) the first tag will be used.",
+        "(C) the second tag will be used.",
+        "(D) both tags will be used."
+    ],
+    "answer":"(B) the first tag will be used."
+},
+{
+    "num":20,
+    "question": "Which browsers support HTML 5?",
+    "choices": [
+        "(A) Google Chrome, Mozilla Firefox",
+        "(B) Apple Safari, Opera",
+        "(C) Only A",
+        "(D) Both A and B"
+    ],
+    "answer":"(D) Both A and B"
 }
 
     ]
