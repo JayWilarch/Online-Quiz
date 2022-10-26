@@ -66,7 +66,7 @@ choices.forEach((choice) => {
     const classToApply =
       selected_answer == currentQuestion.answer ? "correct" : "incorrect";
     console.log(classToApply);
-
+    // if the anwer is correct increment score
     if (classToApply == "correct") {
       incrementScore(correct_bonus);
     }
@@ -82,10 +82,9 @@ choices.forEach((choice) => {
   });
 });
 
-//for showing the score at the upper right
 incrementScore = (num) => {
   ``;
   score += num;
   //scoreText.innerText = score;
-  localStorage.setItem("mostRecentScoreMC", score);
+  localStorage.setItem("mostRecentScoreTF", score);
 };

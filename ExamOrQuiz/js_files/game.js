@@ -62,11 +62,11 @@ choices.forEach((choice) => {
     const selected_answer = selected_choice.dataset["number"];
     //console.log(selected_answer);
 
-    //checking answers for the score board
+    //checking answers for the score
     const classToApply =
       selected_answer == currentQuestion.answer ? "correct" : "incorrect";
     //console.log(classToApply);
-
+    // if the anwer is correct increment score
     if (classToApply == "correct") {
       incrementScore(correct_bonus);
     }
@@ -82,7 +82,6 @@ choices.forEach((choice) => {
   });
 });
 
-//for showing the score at the upper right
 incrementScore = (num) => {
   ``;
   score += num;

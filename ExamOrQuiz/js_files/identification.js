@@ -59,13 +59,13 @@ function get_new_question(index) {
 }
 
 saveAnswer = (e) => {
-  console.log("Click!!!");
+  //console.log("Click!!!");
   e.preventDefault();
-  console.log(currentQuestion.answer);
-  //get input value
+  //console.log(currentQuestion.answer);
+  //get input value fromt the user
   localStorage.setItem("IdentificationAns", idenAnswer.value);
   UserAns = localStorage.getItem("IdentificationAns");
-  console.log(UserAns);
+  //console.log(UserAns);
 
   if (!accoptingAnswers) return;
 
@@ -76,8 +76,8 @@ saveAnswer = (e) => {
     UserAns.toLowerCase() === currentQuestion.answer.toLowerCase()
       ? "correct"
       : "incorrect";
-  console.log(classToApply);
-
+  //console.log(classToApply);
+  // if the anwer is correct increment score
   if (classToApply == "correct") {
     incrementScore(correct_bonus);
   }
@@ -86,7 +86,7 @@ saveAnswer = (e) => {
     que_count++;
     get_new_question(que_count);
   } else {
-    console.log("Complete!");
+    //console.log("Complete!");
     return window.location.assign("/../game/end.html");
   }
 };
