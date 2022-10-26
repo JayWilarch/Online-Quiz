@@ -1,8 +1,10 @@
 const username = localStorage.getItem("recentName");
 const saveScorebtn = document.getElementById("saveScorebtn");
 
-const mostRecentScoreMC = localStorage.getItem("mostRecentScoreMC");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
+const mostRecentScoreMC = localStorage.getItem("mostRecentScoreMC");
+const mostRecentScoreIden = localStorage.getItem("mostRecentScoreIden");
+
 console.log(mostRecentScore);
 console.log(mostRecentScoreMC);
 const finalScore = document.getElementById("finalScore");
@@ -11,7 +13,11 @@ const scoreList = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(scoreList);
 
 const maxScore = 10;
-const totalScore = Number(mostRecentScoreMC) + Number(mostRecentScore);
+//include Number object to convert the string from the localstorage into int
+const totalScore =
+  Number(mostRecentScoreMC) +
+  Number(mostRecentScore) +
+  Number(mostRecentScoreIden);
 finalScore.innerText = totalScore;
 
 //disable save button if there's no username

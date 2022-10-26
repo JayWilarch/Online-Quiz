@@ -1,7 +1,8 @@
 const questionCounterText = document.getElementById("questionCounter");
 const question = document.getElementById("question");
+//choice 1-4
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-//const scoreText = document.getElementById("score");
+//const scoreText = document.getElementById("score");c
 
 let currentQuestion = {};
 let accoptingAnswers = false;
@@ -25,7 +26,7 @@ fetch("/../questions.json")
   });
 
 const correct_bonus = 1;
-const max_question = 10;
+const max_question = 20;
 // start function
 start_game = () => {
   questionCounter = 0;

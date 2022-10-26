@@ -1,7 +1,9 @@
 const questionCounterText = document.getElementById("questionCounter");
 const question = document.getElementById("question");
+const idenAnswer = document.getElementById("idenAnswer");
+const submitAnsBtn = document.getElementById("submitAnsBtn");
 //choice 1-2
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+//const choices = Array.from(document.getElementsByClassName("choice-text"));
 //const scoreText = document.getElementById("score");
 
 let currentQuestion = {};
@@ -21,12 +23,16 @@ fetch("/../questions.json")
   .then((loadedQuestions) => {
     //console.log(loadedQuestions);
     //multiple choice
-    questions = loadedQuestions.TrueOrFalse;
+    questions = loadedQuestions.Identification;
     start_game();
   });
 
+idenAnswer.addEventListener("keyup", () => {
+  submitAnsBtn.disabled = !idenAnswer.value;
+});
+
 const correct_bonus = 1;
-const max_question = 20;
+const max_question = 10;
 // start function
 start_game = () => {
   questionCounter = 0;
@@ -44,48 +50,53 @@ function get_new_question(index) {
   currentQuestion = availableQuestions[index];
   question.innerText = currentQuestion.question;
   //get choices
-  choices.forEach((choice) => {
-    const number = choice.dataset["number"];
-    choice.innerText = currentQuestion["choice" + number];
-  });
+  //choices.forEach((choice) => {
+  //const number = choice.dataset["number"];
+  //choice.innerText = currentQuestion["choice" + number];
+  //});
   //When loaded accepting question is true
   accoptingAnswers = true;
 }
 
+saveAnswer = (e) => {
+  console.log("Click!!!");
+  e.preventDefault();
+  console.log(currentQuestion.answer);
+  //get input value
+  localStorage.setItem("IdentificationAns", idenAnswer.value);
+  UserAns = localStorage.getItem("IdentificationAns");
+  console.log(UserAns);
+
+  if (!accoptingAnswers) return;
+
+  accoptingAnswers = false;
+
+  const classToApply =
+    // toLowercase to Ignore Case from the user input and answer
+    UserAns.toLowerCase() === currentQuestion.answer.toLowerCase()
+      ? "correct"
+      : "incorrect";
+  console.log(classToApply);
+
+  if (classToApply == "correct") {
+    incrementScore(correct_bonus);
+  }
+
+  if (que_count < questions.length - 1) {
+    que_count++;
+    get_new_question(que_count);
+  } else {
+    console.log("Complete!");
+    return window.location.assign("/../game/end.html");
+  }
+};
+
 let que_count = 1;
-choices.forEach((choice) => {
-  choice.addEventListener("click", (e) => {
-    if (!accoptingAnswers) return;
-
-    accoptingAnswers = false;
-    const selected_choice = e.target;
-    const selected_answer = selected_choice.dataset["number"];
-    //console.log(selected_answer);
-
-    //checking answers for the score board
-    const classToApply =
-      selected_answer == currentQuestion.answer ? "correct" : "incorrect";
-    console.log(classToApply);
-
-    if (classToApply == "correct") {
-      incrementScore(correct_bonus);
-    }
-
-    //if there's no more question proceed to the end html
-    if (que_count < questions.length - 1) {
-      que_count++;
-      get_new_question(que_count);
-    } else {
-      //console.log("Complete!");
-      return window.location.assign("/../game/identification.html");
-    }
-  });
-});
 
 //for showing the score at the upper right
 incrementScore = (num) => {
   ``;
   score += num;
   //scoreText.innerText = score;
-  localStorage.setItem("mostRecentScoreMC", score);
+  localStorage.setItem("mostRecentScoreIden", score);
 };

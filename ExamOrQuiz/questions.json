@@ -87,6 +87,86 @@
       "choice3": "Buttons",
       "choice4": "Password",
       "answer": 1
+    },
+    {
+      "question": "How many types of heading does an HTML contain?",
+      "choice1": "5",
+      "choice2": "6",
+      "choice3": "7",
+      "choice4": "8",
+      "answer": 2
+    },
+    {
+      "question": "Which HTML tag is used to display the data in the tabular form?",
+      "choice1": "<tr>",
+      "choice2": "<th>",
+      "choice3": "<td>",
+      "choice4": "<table>",
+      "answer": 4
+    },
+    {
+      "question": "Hyperlinks in HTML have meanings on their colors, what does a link that is colored purple mean?",
+      "choice1": " Unvisited Link",
+      "choice2": "Inactive Link",
+      "choice3": " Active Link",
+      "choice4": "Visited Link",
+      "answer": 4
+    },
+    {
+      "question": "What does <th> mean or do?",
+      "choice1": "It defines a table",
+      "choice2": "It defines a header",
+      "choice3": "It defines a row",
+      "choice4": "It defines a column",
+      "answer": 2
+    },
+    {
+      "question": "What is the use of an iframe tag?",
+      "choice1": "An iframe is used by apple applications.",
+      "choice2": "An iframe is used to display a web page within a web page.",
+      "choice3": "An iframe is used to display apple websites.",
+      "choice4": "An iframe is used to display a web page for IOS users.",
+      "answer": 2
+    },
+    {
+      "question": "Every HTML document should have what?",
+      "choice1": "A head section, and within it a title, followed by a body.",
+      "choice2": "A title section, and within it a header, followed by a body.",
+      "choice3": "A body and header.",
+      "choice4": "None of these.",
+      "answer": 1
+    },
+    {
+      "question": "Which tag would insert a graphic into a Web page?",
+      "choice1": "Img src=Glass.jpeg",
+      "choice2": "P....Glass.jpeg..../p",
+      "choice3": "Img file=Glass.jpeg",
+      "choice4": "Picture=Glass.jpeg",
+      "answer": 1
+    },
+    {
+      "question": "What allows you to transfer your html files to a Web server?",
+      "choice1": "FTP which stands for File Tracking Performance",
+      "choice2": "FTP which stands for File Transfer Protocol",
+      "choice3": "BMR which stands for Binary Metric Rhythm",
+      "choice4": "None of these",
+      "answer": 2
+    },
+    {
+      "question": "What will happen if you overlap sets of tags?",
+      "choice1": "both tags will be nullified.",
+      "choice2": "the first tag will be used",
+      "choice3": "the second tag will be used.",
+      "choice4": "both tags will be used.",
+      "answer": 2
+    },
+    {
+      "question": "Which browsers support HTML 5?",
+      "choice1": "Google Chrome, Mozilla Firefox",
+      "choice2": "Apple Safari, Opera",
+      "choice3": "Only A",
+      "choice4": "Both A and B",
+      "answer": 4
     }
   ],
 
@@ -156,10 +236,70 @@
       "choice1": "TRUE",
       "choice2": "FALSE",
       "answer": 2
+    },
+    {
+      "question": "Every Web page closes with ......body.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "H1 is a larger size text than H2.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "An absolute path is what a server needs to locate the file being requested.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "A home page is the same as your index page.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "Hyper in HTML stands for agile, energetic, enthusiastic, active, alive, ready, quick, rapid, alert & daring.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "A <id> tag defines the label for several input elements like text, email, number, date, etc.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "We can set a placeholder text with the <ph> attribute.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 2
+    },
+    {
+      "question": "Every HTML element has a display property, and the default value of it is either block or inline.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "The autocomplete attribute provides automated suggestions filling out the form field values.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
+    },
+    {
+      "question": "The map tag goes with an <area> tag to determine the clickable areas.",
+      "choice1": "TRUE",
+      "choice2": "FALSE",
+      "answer": 1
     }
   ],
 
-  "Identificatio": [
+  "Identification": [
     {
       "question": "Marquees tag works only with?",
       "answer": "Internet explorer"
