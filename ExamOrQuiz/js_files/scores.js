@@ -6,3 +6,5 @@ allScore.innerHTML = scoreList
     return `<li class="score-list">${score.name} - ${score.score}</li>`;
   })
   .join("");
+//clear localstorage
+//window.localStorage.clear();
