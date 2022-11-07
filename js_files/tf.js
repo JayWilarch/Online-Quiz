@@ -1,3 +1,4 @@
+// Ralph
 const questionCounterText = document.getElementById("questionCounter");
 const question = document.getElementById("question");
 //choice 1-2

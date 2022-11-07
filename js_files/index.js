@@ -1,3 +1,4 @@
+// Vinz
 const username = document.getElementById("username");
 const submitNameBtn = document.getElementById("submitNameBtn");
 

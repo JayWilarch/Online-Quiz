@@ -1,3 +1,4 @@
+//Allan
 const allScore = document.getElementById("allScore");
 const scoreList = JSON.parse(localStorage.getItem("highScores"));
 
@@ -29,6 +30,8 @@ const IdentSum = IdentScoreStorage.reduce(function (a, b) {
 console.log(MCSum);
 console.log(TFSum);
 console.log(IdentSum);
+
+//ALLAN 
 
 // Load google charts
 google.charts.load("current", { packages: ["corechart"] });
